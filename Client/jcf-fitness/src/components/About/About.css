@@ -45,6 +45,7 @@
 }
 
 @media (max-width: 768px) {
+   
     .about-container  .about-me{
         flex-direction: column;
         padding: 0px;
@@ -59,9 +60,10 @@
     .mission{
         padding:10px 20px;
         justify-content: start;
+       
     }
     .mission p{
-        font-size: 8px;
+        font-size: 14px;
     }
     .mission h2{
         font-size: 18px;
