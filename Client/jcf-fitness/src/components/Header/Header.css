@@ -1,0 +1,23 @@
+/* src/components/Header.css */
+.drawerList {
+    width: 250px;
+  }
+  
+  .AppBar {
+    background-color: #333;
+  }
+  
+  .SiteTitle {
+    flex-grow: 1;
+  }
+  
+  .NavLinks button {
+    color: #fff;
+  }
+  
+  @media (max-width: 960px) {
+    .NavLinks {
+      display: none;
+    }
+  }
+  
