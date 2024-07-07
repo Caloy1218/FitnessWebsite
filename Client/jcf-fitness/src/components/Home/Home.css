@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     font-family: poppins;
+    margin-bottom: 20px;
 }
 .title-container{
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
@@ -119,6 +120,7 @@
     }
     .coach-content-container{
         justify-content:flex-start;
+        height: auto;
     }
     .meet-coach-container{
         flex-direction: column;
