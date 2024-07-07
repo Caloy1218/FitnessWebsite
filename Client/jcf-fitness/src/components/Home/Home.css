@@ -26,7 +26,6 @@
 }
 .title-container h3{
     font-size: 25px;
-    margin-top:-35px;
     font-weight: 300;
 }
 .home-container span{
@@ -63,15 +62,18 @@
     padding: 0px 40px;
     justify-content: center;
     gap:50px;
+    align-items: center;
 }
 .meet-coach {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
     width: 60%;
+    color:#0B1215;
+    gap:20px;
 }
 .meet-coach h2{
-    font-size: 35px;
+    font-size: 40px;
 }
 .meet-coach p{
     line-height: 40px;
@@ -81,7 +83,7 @@
 .meet-coach button{
     width: 200px;
     padding:10px;
-    font-size: 22px;
+    font-size: 18px;
     border-radius: 5px;
     border: none;
     background-color: #418B24;
@@ -92,6 +94,7 @@
     color:#418B24;
     border: 1px solid #418B24;
 }
+
 .meet-coach-container img{
     width: 450px;
     border-radius: 5px;
@@ -106,7 +109,6 @@
     }
     .title-container h3{
         font-size: 18px;
-        margin-top:-25px;
     }
     .content-container{
         height: 25vh;
