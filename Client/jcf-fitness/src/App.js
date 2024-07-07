@@ -8,6 +8,7 @@ import OnlineCoaching from './components/OnlineCoaching/OnlineCoaching.jsx';
 import Transformations from './components/Transformation/Transformation.jsx';
 import ContactUs from './components/ContactUs/ContactUs.jsx';
 import Register from './components/Register/Register.jsx';
+import Footer from './components/Footer/Footer.jsx';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }

@@ -1,0 +1,149 @@
+.home-container{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: poppins;
+}
+.title-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+    url('../Assets/barbellPlate-BG.jpg') center/cover no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color:#f3f3f3;
+    justify-content: center;
+    align-items: center;
+}
+.title-container h1{
+    font-size:55px ;
+}
+.title-container h3{
+    font-size: 25px;
+    margin-top:-35px;
+    font-weight: 300;
+}
+.home-container span{
+    color:#418B24;
+}
+
+.content-container{
+    background: #3f3f3f;
+    height: 42vh;
+    width: 100%;
+    color:#f3f3f3;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content-container h2{
+    font-size: 35px;
+}
+.content-container p{
+    font-size: 25px;
+    font-weight: 100;
+}
+.coach-content-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.meet-coach-container {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 40px;
+    justify-content: center;
+    gap:50px;
+}
+.meet-coach {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 60%;
+}
+.meet-coach h2{
+    font-size: 35px;
+}
+.meet-coach p{
+    line-height: 40px;
+    font-size: 22px;
+    margin-top: 0px;
+}
+.meet-coach button{
+    width: 200px;
+    padding:10px;
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+    background-color: #418B24;
+    color: #f3f3f3;
+}
+.meet-coach button:hover{
+    background-color: #f3f3f3;
+    color:#418B24;
+    border: 1px solid #418B24;
+}
+.meet-coach-container img{
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media (max-width: 768px) {
+    .title-container{
+        height: 30vh;
+    }
+    .title-container h1{
+        font-size:35px ;
+    }
+    .title-container h3{
+        font-size: 18px;
+        margin-top:-25px;
+    }
+    .content-container{
+        height: 25vh;
+    }
+    .content-container h2{
+        font-size: 20px;
+        margin: 0;
+    }
+    .content-container p{
+        font-size: 14px;
+    }
+    .coach-content-container{
+        justify-content:flex-start;
+    }
+    .meet-coach-container{
+        flex-direction: column;
+        padding: 30px 10px 0px;
+        gap:5px;
+    }
+    .meet-coach-container img{
+        width: 250px;
+        margin:0 auto;
+    }
+    .meet-coach{
+        width: 95%;
+        text-align: center;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    .meet-coach h2{
+        font-size: 25px;
+    }
+    .meet-coach p{
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .meet-coach button{
+        margin: 0 auto;
+        font-size: 18px;
+    }
+}
