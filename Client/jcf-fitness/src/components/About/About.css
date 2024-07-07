@@ -1,0 +1,72 @@
+.about-container{
+    font-family: poppins;
+    height: auto;
+}
+.about-container .about-me{
+    height: 20vh;
+    display: flex;
+    background: #3f3f3f;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 300px;
+    color: #f3f3f3;
+}
+.about-me h1{
+    margin: 0px;
+    font-size: 50px;
+}
+.about-me p{
+    font-size: 30px;
+    font-weight: 300;
+}
+.about-container span{
+    color:#418B24;
+}
+.mission{
+    height:auto;
+    padding:30px 100px;
+    background-color: #f3f3f3;
+    color:#0B1215;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mission h2{
+    font-size: 40px;
+}
+.mission p{
+    font-size: 22px;
+    font-weight: 300;
+}
+.mission h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-container  .about-me{
+        flex-direction: column;
+        padding: 0px;
+        justify-content:center;
+    }
+    .about-me h1{
+        font-size: 20px;
+    }
+    .about-me p{
+        font-size: 18px;
+    }
+    .mission{
+        padding:10px 20px;
+        justify-content: start;
+    }
+    .mission p{
+        font-size: 8px;
+    }
+    .mission h2{
+        font-size: 18px;
+    }
+    .mission h3{
+        font-size: 16px;
+    }
+}

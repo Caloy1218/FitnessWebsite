@@ -1,6 +1,9 @@
-// src/components/Home.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
-import meetCoach from'../Assets/meet-coach.jpeg';
+import meetCoach from '../Assets/meet-coach.jpeg';
+import Button from '@mui/material/Button';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Home = () => {
   return (
@@ -11,8 +14,7 @@ const Home = () => {
       </div>
       <div className="content-container">
         <h2>READY TO <span>TRANSFORM</span> YOUR LIFE <br/> AND BUILD <span>STRENGTH</span>?</h2>
-        <p>The journey begins with you.
-        Keep it simple.</p>
+        <p>The journey begins with you. Keep it simple.</p>
       </div>
       <div className="coach-content-container">
         <div className="meet-coach-container">
@@ -23,7 +25,11 @@ const Home = () => {
             <br/>
             My mission is to help individuals achieve their best selves, whether that means losing weight, building muscle, or improving overall fitness. To fully embrace life, we must change our mindset—positivity is essential.
             </p>
-            <button>Learn More</button>
+            <Link to="/about">
+              <Button variant="contained">
+                Learn More <ArrowForwardIosIcon sx={{ marginLeft: '10px' }} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
