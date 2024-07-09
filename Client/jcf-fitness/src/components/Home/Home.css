@@ -68,6 +68,7 @@
     width: 60%;
     color:#0B1215;
     gap:20px;
+    min-width: 350px;
 }
 .meet-coach h2{
     font-size: 40px;
@@ -147,6 +148,7 @@
     }
     .meet-coach button {
         margin: 0 auto;
-        font-size: 18px;
+        font-size: 16px;
+        width: 200px;
     }
 }
