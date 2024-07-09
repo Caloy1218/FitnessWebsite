@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     font-family: poppins;
+    margin-top: 60px;
     margin-bottom: 20px;
 }   
 .title-container{
@@ -99,6 +100,9 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media (max-width: 768px) {
+    .home-container{
+        margin-top: 50px;
+    }
     .home-container .title-container {
         height: 30vh;
         background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),

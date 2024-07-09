@@ -1,6 +1,7 @@
 .about-container{
     font-family: poppins;
     height: auto;
+    margin-top: 60px;
 }
 .about-container .about-me{
     height: 20vh;
@@ -45,7 +46,9 @@
 }
 
 @media (max-width: 768px) {
-   
+    .about-container{
+        margin-top: 50px;
+    }
     .about-container  .about-me{
         flex-direction: column;
         padding: 0px;
