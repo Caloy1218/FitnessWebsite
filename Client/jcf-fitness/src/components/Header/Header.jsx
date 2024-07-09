@@ -1,4 +1,3 @@
-// src/components/Header.js
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -19,11 +18,12 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import jcFitnessLogoNoBG from '../Assets/jcFitness_Logo-noBG.png';
 
 const NavLinks = styled('div')(({ theme }) => ({
   display: 'flex',
   flex: 1,
-  justifyContent: 'flex-end',
+  justifyContent: 'flex-start',
   gap: theme.spacing(2),
   [theme.breakpoints.down('md')]: {
     display: 'none',
@@ -31,7 +31,14 @@ const NavLinks = styled('div')(({ theme }) => ({
 }));
 
 const SiteTitle = styled(Typography)(({ theme }) => ({
-  marginRight: 'auto',
+  marginLeft: 'auto',
+  marginTop: 'auto',
+  '& img': {
+    width: '150px', // Default width
+    [theme.breakpoints.down('sm')]: {
+      width: '120px', // Adjusted width for mobile screens
+    },
+  },
 }));
 
 const Header = () => {
@@ -77,7 +84,7 @@ const Header = () => {
   );
 
   return (
-    <AppBar position="static" sx={{backgroundColor:'#418B24'}}>
+    <AppBar position="static" sx={{ backgroundColor: '#418B24' }}>
       <Toolbar>
         <IconButton
           edge="start"
@@ -88,9 +95,6 @@ const Header = () => {
         >
           <MenuIcon />
         </IconButton>
-        <SiteTitle variant="h6">
-          JCFitness
-        </SiteTitle>
         <NavLinks>
           <Button color="inherit" component={Link} to="/">Home</Button>
           <Button color="inherit" component={Link} to="/about">About</Button>
@@ -98,6 +102,9 @@ const Header = () => {
           <Button color="inherit" component={Link} to="/transformations">Transformations</Button>
           <Button color="inherit" component={Link} to="/contact-us">Contact Us</Button>
         </NavLinks>
+        <SiteTitle>
+          <img src={jcFitnessLogoNoBG} alt="jcFitnessLogo" />
+        </SiteTitle>
         <Drawer
           anchor="left"
           open={drawerOpen}

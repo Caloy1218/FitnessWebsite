@@ -14,10 +14,14 @@
   .NavLinks button {
     color: #fff;
   }
+
+  
   
   @media (max-width: 960px) {
     .NavLinks {
       display: none;
     }
+
   }
+
   
