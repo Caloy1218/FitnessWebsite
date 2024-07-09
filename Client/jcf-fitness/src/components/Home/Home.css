@@ -101,7 +101,7 @@
     .home-container .title-container {
         height: 30vh;
         background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
-                    url('../Assets/barbellPlate-BG1.png') center/cover no-repeat fixed;
+                    url('../Assets/barbellPlate-BG1.png') center/cover no-repeat;
     }
     .title-container h1 {
         font-size: 35px;
