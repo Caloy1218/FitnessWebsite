@@ -1,24 +1,17 @@
+// src/components/Header.js
 import React, { useState } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
-import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import TransformationIcon from '@mui/icons-material/Transform';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import { styled } from '@mui/material/styles';
+import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Menu as MenuIcon, Home as HomeIcon, Info as InfoIcon, FitnessCenter as FitnessCenterIcon, Transform as TransformationIcon, ContactMail as ContactMailIcon } from '@mui/icons-material';
+import { styled, ThemeProvider, createTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import jcFitnessLogoNoBG from '../Assets/jcFitness_Logo-noBG.png';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Poppins, Arial, sans-serif',
+  },
+});
 
 const NavLinks = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -41,6 +34,25 @@ const SiteTitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
+const DrawerList = styled('div')(({ theme }) => ({
+  width: 250,
+  backgroundColor: theme.palette.background.paper,
+  height: '100%',
+  paddingLeft:'8px',
+  paddingTop:'30px'
+}));
+
+const DrawerItem = styled(ListItem)(({ theme }) => ({
+  color: theme.palette.text.primary,
+  '&:hover': {
+    backgroundColor: theme.palette.action.hover,
+  },
+}));
+
+const DrawerItemIcon = styled(ListItemIcon)(({ theme }) => ({
+  color: '#418B24',
+}));
+
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -52,68 +64,69 @@ const Header = () => {
   };
 
   const drawerList = (
-    <div
-      className="drawerList"
+    <DrawerList
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem button component={Link} to="/">
-          <ListItemIcon><HomeIcon /></ListItemIcon>
+        <DrawerItem button component={Link} to="/">
+          <DrawerItemIcon><HomeIcon /></DrawerItemIcon>
           <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem button component={Link} to="/about">
-          <ListItemIcon><InfoIcon /></ListItemIcon>
+        </DrawerItem>
+        <DrawerItem button component={Link} to="/about">
+          <DrawerItemIcon><InfoIcon /></DrawerItemIcon>
           <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button component={Link} to="/online-coaching">
-          <ListItemIcon><FitnessCenterIcon /></ListItemIcon>
+        </DrawerItem>
+        <DrawerItem button component={Link} to="/online-coaching">
+          <DrawerItemIcon><FitnessCenterIcon /></DrawerItemIcon>
           <ListItemText primary="Online Coaching" />
-        </ListItem>
-        <ListItem button component={Link} to="/transformations">
-          <ListItemIcon><TransformationIcon /></ListItemIcon>
+        </DrawerItem>
+        <DrawerItem button component={Link} to="/transformations">
+          <DrawerItemIcon><TransformationIcon /></DrawerItemIcon>
           <ListItemText primary="Transformations" />
-        </ListItem>
-        <ListItem button component={Link} to="/contact-us">
-          <ListItemIcon><ContactMailIcon /></ListItemIcon>
+        </DrawerItem>
+        <DrawerItem button component={Link} to="/contact-us">
+          <DrawerItemIcon><ContactMailIcon /></DrawerItemIcon>
           <ListItemText primary="Contact Us" />
-        </ListItem>
+        </DrawerItem>
       </List>
-    </div>
+    </DrawerList>
   );
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#418B24' }}>
-      <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2, display: { md: 'none' } }}
-          onClick={toggleDrawer(true)}
-        >
-          <MenuIcon />
-        </IconButton>
-        <NavLinks>
-          <Button color="inherit" component={Link} to="/">Home</Button>
-          <Button color="inherit" component={Link} to="/about">About</Button>
-          <Button color="inherit" component={Link} to="/online-coaching">Online Coaching</Button>
-          <Button color="inherit" component={Link} to="/transformations">Transformations</Button>
-          <Button color="inherit" component={Link} to="/contact-us">Contact Us</Button>
-        </NavLinks>
-        <SiteTitle>
-          <img src={jcFitnessLogoNoBG} alt="jcFitnessLogo" />
-        </SiteTitle>
-        <Drawer
-          anchor="left"
-          open={drawerOpen}
-          onClose={toggleDrawer(false)}
-        >
-          {drawerList}
-        </Drawer>
-      </Toolbar>
-    </AppBar>
+    <ThemeProvider theme={theme}>
+      <AppBar position="fixed" sx={{ backgroundColor: '#418B24' }}>
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2, display: { md: 'none' } }}
+            onClick={toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <NavLinks>
+            <Button color="inherit" component={Link} to="/">Home</Button>
+            <Button color="inherit" component={Link} to="/about">About</Button>
+            <Button color="inherit" component={Link} to="/online-coaching">Online Coaching</Button>
+            <Button color="inherit" component={Link} to="/transformations">Transformations</Button>
+            <Button color="inherit" component={Link} to="/contact-us">Contact Us</Button>
+          </NavLinks>
+          <SiteTitle>
+            <img src={jcFitnessLogoNoBG} alt="jcFitnessLogo" />
+          </SiteTitle>
+          <Drawer
+            anchor="left"
+            open={drawerOpen}
+            onClose={toggleDrawer(false)}
+          >
+            {drawerList}
+          </Drawer>
+        </Toolbar>
+      </AppBar>
+    </ThemeProvider>
   );
 };
 
