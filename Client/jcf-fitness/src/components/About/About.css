@@ -52,13 +52,13 @@
         justify-content:center;
     }
     .about-me h1{
-        font-size: 20px;
+        font-size: 20px;  
     }
     .about-me p{
         font-size: 18px;
     }
     .mission{
-        padding:10px 20px;
+        padding:20px;
         justify-content: start;
        
     }
