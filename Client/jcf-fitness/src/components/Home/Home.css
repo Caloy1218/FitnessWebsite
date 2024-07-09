@@ -5,13 +5,10 @@
     flex-direction: column;
     font-family: poppins;
     margin-bottom: 20px;
-}
+}   
 .title-container{
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
     url('../Assets/barbellPlate-BG.jpg') center/cover no-repeat fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     height: 50vh;
     text-align: center;
@@ -101,52 +98,54 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 @media (max-width: 768px) {
-    .title-container{
+    .home-container .title-container {
         height: 30vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)),
+                    url('../Assets/barbellPlate-BG1.png') center/cover no-repeat fixed;
     }
-    .title-container h1{
-        font-size:35px ;
+    .title-container h1 {
+        font-size: 35px;
     }
-    .title-container h3{
+    .title-container h3 {
         font-size: 18px;
     }
-    .content-container{
+    .content-container {
         height: 25vh;
     }
-    .content-container h2{
+    .content-container h2 {
         font-size: 20px;
         margin: 0;
     }
-    .content-container p{
+    .content-container p {
         font-size: 14px;
     }
-    .coach-content-container{
-        justify-content:flex-start;
+    .coach-content-container {
+        justify-content: flex-start;
         height: auto;
     }
-    .meet-coach-container{
+    .meet-coach-container {
         flex-direction: column;
         padding: 30px 10px 0px;
-        gap:5px;
+        gap: 5px;
     }
-    .meet-coach-container img{
+    .meet-coach-container img {
         width: 250px;
-        margin:0 auto;
+        margin: 0 auto;
     }
-    .meet-coach{
+    .meet-coach {
         width: 95%;
         text-align: center;
         padding: 0px;
         margin: 0 auto;
     }
-    .meet-coach h2{
+    .meet-coach h2 {
         font-size: 25px;
     }
-    .meet-coach p{
+    .meet-coach p {
         font-size: 14px;
         line-height: 25px;
     }
-    .meet-coach button{
+    .meet-coach button {
         margin: 0 auto;
         font-size: 18px;
     }
