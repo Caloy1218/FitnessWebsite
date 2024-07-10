@@ -1,36 +1,82 @@
-.onlineCoaching-container{
+.onlineCoaching-container {
     margin-top: 60px;
+    padding: 0px 20px;
     font-family: 'Poppins', Arial, sans-serif;
-    height: auto;
-}
-.onlineCoaching-content{
+    min-height: 100vh; /* Ensure container takes at least full viewport height */
+  }
+  
+  .onlineCoaching-content {
     margin: 0 auto;
-    padding: 20px 0;
-    width: 800px;
+    padding: 20px 20px 0; /* Adjust padding for top and sides */
+    max-width: 800px; /* Use max-width instead of fixed width for responsiveness */
     text-align: center;
-    min-width: 300px;
-}
-.onlineCoaching-content h1{
+  }
+  
+  .onlineCoaching-content h1 {
     font-size: 40px;
-}
-.onlineCoaching-content p{
+    /* Example of responsive font-size adjustment */
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
+  }
+  
+  .onlineCoaching-content p {
     font-size: 18px;
     font-weight: 300;
-}
-.onlineCoaching-cards {
+    /* Example of responsive font-size adjustment */
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  .onlineCoaching-cards {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 20px 0px;
+    margin-top: 20px;
   }
   
   .card {
     text-align: center;
-    padding: 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
-
-@media (max-width: 768px) {
-    .onlineCoaching-container{
-        margin-top: 50px;
+  .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-header .MuiTypography-root {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .card-actions {
+    justify-content: flex-end;
+  }
+  
+  .onlineCoaching-container .join-now-button {/* Align button to the bottom of the card */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 200px;
+    padding:10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    background-color: #418B24;
+    color: #f3f3f3;/* Add margin for spacing */
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 20px auto;
+  }
+  
+  @media (max-width: 600px) {
+    .join-now-button {
+      font-size: 12px; /* Example of responsive font-size adjustment */
     }
-}
+  }
+  
