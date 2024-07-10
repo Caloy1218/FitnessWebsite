@@ -1,0 +1,36 @@
+.onlineCoaching-container{
+    margin-top: 60px;
+    font-family: 'Poppins', Arial, sans-serif;
+    height: auto;
+}
+.onlineCoaching-content{
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 800px;
+    text-align: center;
+    min-width: 300px;
+}
+.onlineCoaching-content h1{
+    font-size: 40px;
+}
+.onlineCoaching-content p{
+    font-size: 18px;
+    font-weight: 300;
+}
+.onlineCoaching-cards {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+@media (max-width: 768px) {
+    .onlineCoaching-container{
+        margin-top: 50px;
+    }
+}
