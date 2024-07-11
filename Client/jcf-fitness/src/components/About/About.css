@@ -7,10 +7,11 @@
     height: 20vh;
     display: flex;
     background: #3f3f3f;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     padding: 0 300px;
     color: #f3f3f3;
+    gap: 20px;
 }
 .about-me h1{
     margin: 0px;
@@ -43,6 +44,12 @@
 .mission h3{
     font-size: 30px;
     text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .about-container .about-me{
+        padding: 0 100px;
+    }
 }
 
 @media (max-width: 768px) {

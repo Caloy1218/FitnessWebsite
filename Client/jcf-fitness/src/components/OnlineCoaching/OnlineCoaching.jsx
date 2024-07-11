@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './OnlineCoaching.css';
-import { Card, CardHeader, CardContent, CardActions, Typography, IconButton, Grid, Collapse, Button } from '@mui/material';
+import { Card, CardHeader, CardContent, CardActions, Typography, IconButton, Grid, Collapse, Button, Divider, useMediaQuery } from '@mui/material';
 import MessageIcon from '@mui/icons-material/Message';
 import CheckIcon from '@mui/icons-material/Check';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
@@ -11,6 +11,7 @@ import JCFitnessIcon from '../Assets/jcFitness_Icon-noBG.png'; // Adjust the pat
 
 const OnlineCoaching = () => {
   const [expanded, setExpanded] = useState(null);
+  const isMobile = useMediaQuery('(max-width:600px)');
 
   const handleExpandClick = (index) => {
     setExpanded(expanded === index ? null : index);
@@ -46,30 +47,32 @@ const OnlineCoaching = () => {
                   }
                   subheader={card.subheader}
                 />
-                <Collapse in={expanded === index} timeout="auto" unmountOnExit>
-                  <CardContent>
+                <Divider sx={{ width: '90%', margin: 'auto',backgroundColor:'#418B24'}} />
+                <Collapse in={isMobile ? expanded === index : true} timeout="auto" unmountOnExit>
+                  <CardContent className='cardContent'>
                     <Typography paragraph sx={{ margin: '0px' }}>{card.content}</Typography>
                   </CardContent>
                 </Collapse>
-                <CardActions sx={{ paddingTop: '0px' }} disableSpacing className="card-actions">
-                  <IconButton
-                    onClick={() => handleExpandClick(index)}
-                    aria-expanded={expanded === index}
-                    aria-label="show more"
-                  >
-                    {expanded === index ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-                  </IconButton>
-                </CardActions>
+                {isMobile && (
+                  <CardActions sx={{ paddingTop: '0px' }} disableSpacing className="card-actions">
+                    <IconButton
+                      onClick={() => handleExpandClick(index)}
+                      aria-expanded={expanded === index}
+                      aria-label="show more"
+                    >
+                      {expanded === index ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+                    </IconButton>
+                  </CardActions>
+                )}
               </Card>
             </Grid>
           ))}
-           
         </Grid>
       </div>
       <Button variant="contained" color="primary" fullWidth className="join-now-button">
-                  <img src={JCFitnessIcon} alt="JC Fitness Icon" width="24px" height="24px" style={{ marginRight: '8px' }} />
-                  JOIN NOW
-        </Button>
+        <img src={JCFitnessIcon} alt="JC Fitness Icon" width="24px" height="24px" style={{ marginRight: '8px' }} />
+        JOIN NOW
+      </Button>
     </div>
   );
 };
