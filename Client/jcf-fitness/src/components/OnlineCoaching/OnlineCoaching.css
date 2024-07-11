@@ -1,82 +1,96 @@
 .onlineCoaching-container {
-    margin-top: 60px;
-    padding: 0px 20px;
-    font-family: 'Poppins', Arial, sans-serif;
-    min-height: 100vh; /* Ensure container takes at least full viewport height */
+  margin-top: 60px;
+  padding: 0px 0px;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 92vh; /* Ensure container takes at least full viewport height */
+}
+
+.onlineCoaching-content {
+  margin: 0 auto;
+  padding: 30px 20px 0; /* Adjust padding for top and sides */
+  max-width: 800px; /* Use max-width instead of fixed width for responsiveness */
+  text-align: center;
+}
+
+.onlineCoaching-content h1 {
+  font-size: 40px;
+  /* Example of responsive font-size adjustment */
+  @media (max-width: 768px) {
+    font-size: 25px;
   }
-  
-  .onlineCoaching-content {
-    margin: 0 auto;
-    padding: 20px 20px 0; /* Adjust padding for top and sides */
-    max-width: 800px; /* Use max-width instead of fixed width for responsiveness */
-    text-align: center;
+}
+
+.onlineCoaching-content p {
+  font-size: 18px;
+  font-weight: 300;
+  /* Example of responsive font-size adjustment */
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
+}
+
+.onlineCoaching-cards {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 0px;
+  max-width: 1250px;
+  margin: 20px auto 40px;
+}
+
+.card {
+  text-align: center;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
-  .onlineCoaching-content h1 {
-    font-size: 40px;
-    /* Example of responsive font-size adjustment */
-    @media (max-width: 768px) {
-      font-size: 25px;
-    }
-  }
-  
-  .onlineCoaching-content p {
-    font-size: 18px;
-    font-weight: 300;
-    /* Example of responsive font-size adjustment */
-    @media (max-width: 768px) {
-      font-size: 16px;
-    }
-  }
-  
-  .onlineCoaching-cards {
-    display: flex;
-    justify-content: center;
-    padding: 20px 20px 0px;
-    margin-top: 20px;
-  }
-  
+  height: auto;
+  border:1px solid #418B24;
+  /* Set a fixed height for non-mobile view */
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-header .MuiTypography-root {
+  font-size: 24px;
+  margin-top: 10px;
+}
+.card .cardContent{
+  height: 200px;
+}
+.card-actions {
+  justify-content: flex-end;
+}
+
+.onlineCoaching-container .join-now-button {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 200px;
+  padding:10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  background-color: #418B24;
+  color: #f3f3f3;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 20px auto;
+}
+.onlineCoaching-container .join-now-button:hover{
+  background-color: rgba(65, 139, 36, 0.8); /* Add a black overlay on hover */
+}
+@media (max-width: 600px) {
   .card {
-    text-align: center;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: auto; /* Allow card height to adjust for mobile view */
   }
-  
-  .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .card .cardContent{
+    height: auto;
   }
-  
-  .card-header .MuiTypography-root {
-    font-size: 24px;
-    margin-top: 10px;
+  .join-now-button {
+    font-size: 12px; /* Example of responsive font-size adjustment */
   }
-  
-  .card-actions {
-    justify-content: flex-end;
-  }
-  
-  .onlineCoaching-container .join-now-button {/* Align button to the bottom of the card */
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    width: 200px;
-    padding:10px;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    background-color: #418B24;
-    color: #f3f3f3;/* Add margin for spacing */
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 20px auto;
-  }
-  
-  @media (max-width: 600px) {
-    .join-now-button {
-      font-size: 12px; /* Example of responsive font-size adjustment */
-    }
-  }
-  
+}
